@@ -17,14 +17,14 @@ function Account({ accounts }) {
       </thead>
       <tbody>
         {accounts.map(account => (
-          <tr key={account.id}>
-            <td>{account.id}</td>
+          <tr key={account._id}>
+            <td>{account._id}</td>
             <td>{account.username}</td>
             <td>{account.is_admin ? 'Yes' : 'No'}</td>
             <td>{account.is_staff ? 'Yes' : 'No'}</td>
             <td>{account.is_active ? 'Yes' : 'No'}</td>
             <td>
-              <Link to={`/account/${account.id}`}>
+              <Link to={`/account/${account._id}`}>
                 <Button variant="primary">View Account</Button>
               </Link>
             </td>

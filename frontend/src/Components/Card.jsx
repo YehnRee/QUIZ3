@@ -7,12 +7,12 @@ import { Button } from 'react-bootstrap'
 function Product({product}) {
   return (
     <Card className='my-3 p-3 rounded'>
-        <Link href={`/product/${product._id}`}>
+        <Link to={`/product/${product._id}`}>
           <Card.Img src={product.image} />
         </Link>
 
         <Card.Body>
-          <Link href={`/product/${product._id}`}>
+          <Link to={`/product/${product._id}`}>
             <Card.Title as="div">
               <strong>{product.name}</strong>
             </Card.Title>
@@ -29,7 +29,7 @@ function Product({product}) {
           </Card.Text>
         </Card.Body>
 
-        <Link href={`/product/${product._id}`}>
+        <Link to={`/product/${product._id}`}>
             <Button variant="primary" className="w-100">
                 View Product
             </Button>
